@@ -24,19 +24,25 @@ export function Header() {
         Arijit Patra
       </h1>
       <nav
-        className={`text-lg space-x-8 mt-10 ${raleway.className} text-slate-500 dark:text-slate-300`}
+        className={`text-md space-x-8 mt-10 ${raleway.className} text-slate-500 dark:text-slate-300`}
       >
         {/* <nav className="z-10 max-w-5xl w-full items-center justify-between text-sm lg:flex"> */}
         <Link
           href="/"
-          className={`${pathname === "/" ? "text-red-600 font-bold" : ""}`}
+          className={`${
+            pathname === "/"
+              ? "text-red-600 font-bold"
+              : "hover:decoration-red-600 hover:underline underline-offset-8 decoration-4"
+          }`}
         >
           About
         </Link>
         <Link
           href="/resume"
           className={`${
-            pathname === "/resume" ? "text-red-600 font-bold" : ""
+            pathname === "/resume"
+              ? "text-red-600 font-bold"
+              : "hover:decoration-red-600 hover:underline underline-offset-8 decoration-4"
           }`}
         >
           Resume
@@ -46,7 +52,9 @@ export function Header() {
         <Link
           href="/photography"
           className={`${
-            pathname === "/photography" ? "text-red-600 font-bold" : ""
+            pathname === "/photography"
+              ? "text-red-600 font-bold"
+              : "hover:decoration-red-600 hover:underline underline-offset-8 decoration-4"
           }`}
         >
           Photography
@@ -54,7 +62,9 @@ export function Header() {
         <Link
           href="/design"
           className={`${
-            pathname === "/design" ? "text-red-600 font-bold" : ""
+            pathname === "/design"
+              ? "text-red-600 font-bold"
+              : "hover:decoration-red-600 hover:underline underline-offset-8 decoration-4"
           }`}
         >
           Design
@@ -62,7 +72,9 @@ export function Header() {
         <Link
           href="/achievements"
           className={`${
-            pathname === "/achievements" ? "text-red-600 font-bold" : ""
+            pathname === "/achievements"
+              ? "text-red-600 font-bold"
+              : "hover:decoration-red-600 hover:underline underline-offset-8 decoration-4"
           }`}
         >
           Achievement
@@ -70,7 +82,9 @@ export function Header() {
         <Link
           href="/contact"
           className={`${
-            pathname === "/contact" ? "text-red-600 font-bold" : ""
+            pathname === "/contact"
+              ? "text-red-600 font-bold"
+              : "hover:decoration-red-600 hover:underline underline-offset-8 decoration-4"
           }`}
         >
           Contact
