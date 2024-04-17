@@ -19,9 +19,13 @@ export default function RootLayout({
   return (
     <html lang="en" className="bg-white dark:bg-black">
       <body className={sourceSans.className}>
-        <Header />
-        <main className="py-32 px-40 container mx-auto">{children}</main>
-        <Footer />
+        <main className="px-8 py-12 container mx-auto">
+          <Header />
+          <section className="py-16">
+          {children}
+          </section>
+          <Footer />
+        </main>
       </body>
     </html>
   );

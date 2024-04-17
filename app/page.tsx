@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function Home() {
   return (
     <>
-      <div className="relative flex place-items-center gap-16">
+      <div className="flex flex-col md:flex-row items-center gap-16">
         <Image
           className="rounded-full dark:brightness-75"
           src="/dp.jpg"
@@ -12,8 +12,8 @@ export default function Home() {
           height={180}
           priority
         />
-        <div className="text-lg leading-7 text-slate-700 dark:text-slate-300">
-          <p>
+        <div className="text-md leading-7 text-slate-700 dark:text-slate-300">
+          <p className="text-lg">
             <span className="text-red-600">Hi, I am Arijit Patra.</span>{" "}
             Currently working as a Senior Frontend Engineer with InstaFreight,
             Berlin.
