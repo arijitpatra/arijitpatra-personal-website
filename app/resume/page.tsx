@@ -5,13 +5,13 @@ export default function Page() {
         <a
           href="/ArijitPatra.pdf"
           target="_blank"
-          className="px-20 py-2 border-4 border-slate-600  hover:bg-slate-600 hover:text-white"
+          className="px-20 py-2 border-4 text-center border-slate-600  hover:bg-slate-600 hover:text-white dark:text-slate-300"
         >
           View PDF
         </a>
         <a
           href="/ArijitPatra.pdf"
-          className="px-20 py-2 border-4 border-slate-600  hover:bg-slate-600 hover:text-white"
+          className="px-20 py-2 border-4 text-center border-slate-600  hover:bg-slate-600 hover:text-white dark:text-slate-300"
           download
         >
           Download

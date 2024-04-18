@@ -8,11 +8,9 @@ const homemadeApple = Homemade_Apple({
   weight: "400",
 });
 
-
 export function Header() {
-
   return (
-    <header className="relative flex md:flex-col justify-between items-center sticky">
+    <header className="flex md:flex-col justify-between items-center sticky top-8">
       <h1 className={`text-xl ${homemadeApple.className} dark:text-slate-300`}>
         <Link href="/">Arijit Patra</Link>
       </h1>
