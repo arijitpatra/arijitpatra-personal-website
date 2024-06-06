@@ -3,8 +3,8 @@
 import Link from "next/link";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { Raleway } from "next/font/google";
-import { usePathname } from "next/navigation";
 import { useState } from "react";
+import { NavListLink } from "./NavListLink";
 
 const raleway = Raleway({
   subsets: ["latin"],
@@ -13,65 +13,19 @@ const raleway = Raleway({
 });
 
 export function Navigation() {
-  const pathname = usePathname();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const toggleMenu = () => setIsMenuOpen((prev) => !prev);
 
   const menu = (
     <ul className="flex flex-col md:flex-row items-center">
-      <li
-        className={`p-4 border-b-4 border-transparent ${
-          pathname === "/" ? "text-red-600 font-bold" : "hover:border-red-600"
-        }`}
-      >
-        <Link href="/">About</Link>
-      </li>
-      <li
-        className={`p-4 border-b-4 border-transparent ${
-          pathname === "/resume"
-            ? "text-red-600 font-bold"
-            : "hover:border-red-600"
-        }`}
-      >
-        <Link href="/resume">Resume</Link>
-      </li>
-      <li className="p-4 border-b-4 border-transparent text-slate-300 dark:text-slate-500">
-        <a>Work</a>
-      </li>
-      <li
-        className={`p-4 border-b-4 border-transparent ${
-          pathname === "/photography"
-            ? "text-red-600 font-bold"
-            : "hover:border-red-600"
-        }`}
-      >
-        <Link href="/photography">Photography</Link>
-      </li>
-      <li
-        className={`p-4 border-b-4 border-transparent ${
-          pathname === "/design"
-            ? "text-red-600 font-bold"
-            : "hover:border-red-600"
-        }`}
-      >
-        <Link href="/design">Design</Link>
-      </li>
-      <li className="p-4 border-b-4 border-transparent text-slate-300 dark:text-slate-500">
-        <a>Achievement</a>
-      </li>
-      <li
-        className={`p-4 border-b-4 border-transparent ${
-          pathname === "/contact"
-            ? "text-red-600 font-bold"
-            : "hover:border-red-600"
-        }`}
-      >
-        <Link href="/contact">Contact</Link>
-      </li>
-      <li className="p-4 border-b-4 border-transparent text-slate-300 dark:text-slate-500">
-        {/* To Medium */}
-        <a>Blog</a>
-      </li>
+      <NavListLink path="/" title="About" />
+      <NavListLink path="/resume" title="Resume" />
+      <NavListLink path="/work" title="Work" disabled />
+      <NavListLink path="/photography" title="Photography" />
+      <NavListLink path="/design" title="Design" />
+      <NavListLink path="/achievement" title="Achievement" disabled />
+      <NavListLink path="/contact" title="Contact" />
+      <NavListLink path="/medium" title="Blog" disabled />
     </ul>
   );
 
